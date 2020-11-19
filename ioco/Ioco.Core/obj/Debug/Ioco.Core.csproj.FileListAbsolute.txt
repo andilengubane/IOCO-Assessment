@@ -1,0 +1,2 @@
+C:\Development\ioco\Ioco\Ioco.Core\obj\Debug\Ioco.Core.csprojAssemblyReference.cache
+C:\Development\ioco\Ioco\Ioco.Core\obj\Debug\Ioco.Core.csproj.CoreCompileInputs.cache

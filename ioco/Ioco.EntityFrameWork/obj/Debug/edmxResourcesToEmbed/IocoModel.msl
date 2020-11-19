@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="IocoModelStoreContainer" CdmEntityContainer="IocoEntities">
+    <EntitySetMapping Name="Owner">
+      <EntityTypeMapping TypeName="IocoModel.Owner">
+        <MappingFragment StoreEntitySet="Owner">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PetId" ColumnName="PetId" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DateLogged" ColumnName="DateLogged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pet">
+      <EntityTypeMapping TypeName="IocoModel.Pet">
+        <MappingFragment StoreEntitySet="Pet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PetName" ColumnName="PetName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="DateLogged" ColumnName="DateLogged" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

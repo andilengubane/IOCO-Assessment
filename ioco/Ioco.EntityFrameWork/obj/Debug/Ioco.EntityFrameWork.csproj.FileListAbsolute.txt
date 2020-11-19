@@ -1,0 +1,12 @@
+C:\Development\ioco\Ioco\Ioco.EntityFrameWork\bin\Debug\Ioco.EntityFrameWork.dll.config
+C:\Development\ioco\Ioco\Ioco.EntityFrameWork\bin\Debug\Ioco.EntityFrameWork.dll
+C:\Development\ioco\Ioco\Ioco.EntityFrameWork\bin\Debug\Ioco.EntityFrameWork.pdb
+C:\Development\ioco\Ioco\Ioco.EntityFrameWork\bin\Debug\EntityFramework.dll
+C:\Development\ioco\Ioco\Ioco.EntityFrameWork\bin\Debug\EntityFramework.SqlServer.dll
+C:\Development\ioco\Ioco\Ioco.EntityFrameWork\bin\Debug\EntityFramework.xml
+C:\Development\ioco\Ioco\Ioco.EntityFrameWork\bin\Debug\EntityFramework.SqlServer.xml
+C:\Development\ioco\Ioco\Ioco.EntityFrameWork\obj\Debug\Ioco.EntityFrameWork.csprojAssemblyReference.cache
+C:\Development\ioco\Ioco\Ioco.EntityFrameWork\obj\Debug\Ioco.EntityFrameWork.csproj.CoreCompileInputs.cache
+C:\Development\ioco\Ioco\Ioco.EntityFrameWork\obj\Debug\Ioco.EntityFrameWork.csproj.CopyComplete
+C:\Development\ioco\Ioco\Ioco.EntityFrameWork\obj\Debug\Ioco.EntityFrameWork.dll
+C:\Development\ioco\Ioco\Ioco.EntityFrameWork\obj\Debug\Ioco.EntityFrameWork.pdb

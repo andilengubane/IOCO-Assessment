@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IocoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Owner">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PetId" Type="int" />
+    <Property Name="FirstName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="PhoneNumber" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="IdNumber" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="Address" Type="varchar(max)" />
+    <Property Name="DateLogged" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Pet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PetName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="DateLogged" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__Owner__PetId__1367E606">
+    <End Role="Pet" Type="Self.Pet" Multiplicity="0..1" />
+    <End Role="Owner" Type="Self.Owner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Owner">
+        <PropertyRef Name="PetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="IocoModelStoreContainer">
+    <EntitySet Name="Owner" EntityType="Self.Owner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pet" EntityType="Self.Pet" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Owner__PetId__1367E606" Association="Self.FK__Owner__PetId__1367E606">
+      <End Role="Pet" EntitySet="Pet" />
+      <End Role="Owner" EntitySet="Owner" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,6 @@
+C:\Development\ioco\Ioco\Ioco.DTO\bin\Debug\Ioco.DTO.dll
+C:\Development\ioco\Ioco\Ioco.DTO\bin\Debug\Ioco.DTO.pdb
+C:\Development\ioco\Ioco\Ioco.DTO\obj\Debug\Ioco.DTO.csprojAssemblyReference.cache
+C:\Development\ioco\Ioco\Ioco.DTO\obj\Debug\Ioco.DTO.csproj.CoreCompileInputs.cache
+C:\Development\ioco\Ioco\Ioco.DTO\obj\Debug\Ioco.DTO.dll
+C:\Development\ioco\Ioco\Ioco.DTO\obj\Debug\Ioco.DTO.pdb

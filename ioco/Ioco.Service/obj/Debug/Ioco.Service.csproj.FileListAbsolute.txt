@@ -1,0 +1,6 @@
+C:\Development\ioco\Ioco\Ioco.Service\bin\Debug\Ioco.Service.dll
+C:\Development\ioco\Ioco\Ioco.Service\bin\Debug\Ioco.Service.pdb
+C:\Development\ioco\Ioco\Ioco.Service\obj\Debug\Ioco.Service.csprojAssemblyReference.cache
+C:\Development\ioco\Ioco\Ioco.Service\obj\Debug\Ioco.Service.csproj.CoreCompileInputs.cache
+C:\Development\ioco\Ioco\Ioco.Service\obj\Debug\Ioco.Service.dll
+C:\Development\ioco\Ioco\Ioco.Service\obj\Debug\Ioco.Service.pdb
