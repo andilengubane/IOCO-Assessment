@@ -9,6 +9,7 @@ namespace Ioco.Core.interfaces
     public interface IPetRepository : IRepository<Pet>
     {
         int SavePet(PetDTO petDTO);
+        List<PetDTO> GetAllPets();
         PetDTO GetPetById(int id);
     }
 }

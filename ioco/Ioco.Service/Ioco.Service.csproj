@@ -41,9 +41,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IOnwerService.cs" />
+    <Compile Include="IPetService.cs" />
     <Compile Include="OnwerService.cs" />
     <Compile Include="PetService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ioco.Core\Ioco.Core.csproj">
+      <Project>{B0869DC7-9483-4100-98A0-8903874CD2E6}</Project>
+      <Name>Ioco.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ioco.DTO\Ioco.DTO.csproj">
+      <Project>{5a545737-c68f-4d9e-a953-a06920b68917}</Project>
+      <Name>Ioco.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ioco.EntityFrameWork\Ioco.EntityFrameWork.csproj">
+      <Project>{4F7C83A5-6B99-4009-A7E6-1C446A963C80}</Project>
+      <Name>Ioco.EntityFrameWork</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

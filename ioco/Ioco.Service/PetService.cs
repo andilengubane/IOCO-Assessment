@@ -1,12 +1,26 @@
 ﻿using System;
+using Ioco.Core;
+using Ioco.DTO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ioco.Service
 {
-    class PetService
+    public class PetService : IPetService
     {
+        private readonly UnitOfWork _uow = new UnitOfWork();
+
+        public PetService() { }
+        public List<PetDTO> GetAllPets()
+        {
+            try
+            {
+                var results = _uow.PetRepository.GetAllPets();
+                return results;
+            }
+            catch (Exception ex)
+            {
+                return new List<PetDTO>();
+            }
+        }
     }
 }
