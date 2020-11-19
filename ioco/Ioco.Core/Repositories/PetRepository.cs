@@ -16,11 +16,19 @@ namespace Ioco.Core.Repositories
             _context = context;
             DtoMapping.Map();
         }
+
         public PetDTO GetPetById(int id)
         {
             var pet = Get(id);
             return AutoMapper.Mapper.Map<PetDTO>(pet);
         }
+
+        public List<PetDTO> GetAllPets()
+        {
+            var results = GetAll(); 
+            return AutoMapper.Mapper.Map<List<PetDTO>>(results);
+        }
+
         public int SavePet(PetDTO petDTO)
         {
             Pet pet = new Pet();
