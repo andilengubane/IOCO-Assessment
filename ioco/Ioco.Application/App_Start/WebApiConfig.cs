@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web.Http;
+﻿using System.Web.Http;
 using System.Web.Http.Cors;
 
 namespace Ioco.Application
@@ -20,7 +17,9 @@ namespace Ioco.Application
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
-            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+            var cors = new EnableCorsAttribute("http://localhost:4200", "*", "*");
+
+            config.EnableCors(cors);
         }
     }
 }

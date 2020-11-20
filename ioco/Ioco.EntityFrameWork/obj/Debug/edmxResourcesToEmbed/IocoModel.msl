@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="IocoModelStoreContainer" CdmEntityContainer="IocoEntities">
+  <EntityContainerMapping StorageEntityContainer="TestModelStoreContainer" CdmEntityContainer="IOCOEntities">
     <EntitySetMapping Name="Owner">
-      <EntityTypeMapping TypeName="IocoModel.Owner">
+      <EntityTypeMapping TypeName="TestModel.Owner">
         <MappingFragment StoreEntitySet="Owner">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="PetId" ColumnName="PetId" />
@@ -16,7 +16,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Pet">
-      <EntityTypeMapping TypeName="IocoModel.Pet">
+      <EntityTypeMapping TypeName="TestModel.Pet">
         <MappingFragment StoreEntitySet="Pet">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="PetName" ColumnName="PetName" />

@@ -13,11 +13,13 @@ namespace Ioco.EntityFrameWork
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class IocoEntities : DbContext
+    public partial class IOCOEntities : DbContext
     {
-        public IocoEntities()
-            : base("name=IocoEntities")
+        public IOCOEntities()
+            : base("name=IOCOEntities")
         {
+            var ensureDLLIsCopied =
+              System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

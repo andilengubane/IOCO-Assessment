@@ -50,56 +50,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IocoModel.Context.cs">
+    <Compile Include="IOCOModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>IocoModel.Context.tt</DependentUpon>
+      <DependentUpon>IOCOModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="IocoModel.cs">
+    <Compile Include="IOCOModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>IocoModel.tt</DependentUpon>
+      <DependentUpon>IOCOModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="IocoModel.Designer.cs">
+    <Compile Include="IOCOModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>IocoModel.edmx</DependentUpon>
+      <DependentUpon>IOCOModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Owner.cs">
-      <DependentUpon>IocoModel.tt</DependentUpon>
+      <DependentUpon>IOCOModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Pet.cs">
-      <DependentUpon>IocoModel.tt</DependentUpon>
+      <DependentUpon>IOCOModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="IocoModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>IocoModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="IocoModel.edmx.diagram">
-      <DependentUpon>IocoModel.edmx</DependentUpon>
+    <EntityDeploy Include="IOCOModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>IOCOModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="IOCOModel.edmx.diagram">
+      <DependentUpon>IOCOModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="IocoModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>IocoModel.Context.cs</LastGenOutput>
-      <DependentUpon>IocoModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="IocoModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IocoModel.edmx</DependentUpon>
-      <LastGenOutput>IocoModel.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="IOCOModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IOCOModel.edmx</DependentUpon>
+      <LastGenOutput>IOCOModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="IOCOModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>IOCOModel.edmx</DependentUpon>
+      <LastGenOutput>IOCOModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

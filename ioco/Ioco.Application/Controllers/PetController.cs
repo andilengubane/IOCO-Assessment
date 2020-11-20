@@ -1,27 +1,35 @@
-﻿using Ioco.Service;
+﻿using System;
+using Ioco.DTO;
+using System.Linq;
+using Ioco.Service;
+using System.Web.Mvc;
 using System.Web.Http;
+using System.Web.Http.Cors;
+using System.Collections.Generic;
 
 namespace Ioco.Application.Controllers
 {
+    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class PetController : ApiController
     {
-        private readonly IPetService _petService;
-
-        public PetController()
+        // Get: api/Pet
+        [System.Web.Http.HttpGet]
+        public IEnumerable<SelectListItem> GetPets()
         {
-            _petService = new PetService();
+            var model = new PetDTO();
+            var data = model.PetList;
+            return data = PetService.GetPetList(); 
         }
 
-        [HttpGet]
-        public IHttpActionResult GetAllPets()
+        // POST: api/Pet
+        [System.Web.Http.HttpPost]
+        public string SavePer(PetDTO model)
         {
-            var results = _petService.GetAllPets();
-
-            if (results != null)
+            if (!String.IsNullOrWhiteSpace(model.PetName))
             {
-                return Ok(results);
+                return PetService.SavePet(model); 
             }
-            return BadRequest("Something went wrong");
+            return "Something went wrong with collection.";
         }
     }
 }
