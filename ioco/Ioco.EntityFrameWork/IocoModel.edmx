@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="IocoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Owner">
           <Key>
             <PropertyRef Name="Id" />
@@ -39,7 +39,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="IocoModelStoreContainer">
+        <EntityContainer Name="TestModelStoreContainer">
           <EntitySet Name="Owner" EntityType="Self.Owner" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Pet" EntityType="Self.Pet" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__Owner__PetId__1367E606" Association="Self.FK__Owner__PetId__1367E606">
@@ -51,7 +51,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="IocoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Owner">
           <Key>
             <PropertyRef Name="Id" />
@@ -88,7 +88,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="IocoEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="IOCOEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Owner" EntityType="Self.Owner" />
           <EntitySet Name="Pet" EntityType="Self.Pet" />
           <AssociationSet Name="FK__Owner__PetId__1367E606" Association="Self.FK__Owner__PetId__1367E606">
@@ -101,9 +101,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="IocoModelStoreContainer" CdmEntityContainer="IocoEntities">
+        <EntityContainerMapping StorageEntityContainer="TestModelStoreContainer" CdmEntityContainer="IOCOEntities">
           <EntitySetMapping Name="Owner">
-            <EntityTypeMapping TypeName="IocoModel.Owner">
+            <EntityTypeMapping TypeName="TestModel.Owner">
               <MappingFragment StoreEntitySet="Owner">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="PetId" ColumnName="PetId" />
@@ -117,7 +117,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Pet">
-            <EntityTypeMapping TypeName="IocoModel.Pet">
+            <EntityTypeMapping TypeName="TestModel.Pet">
               <MappingFragment StoreEntitySet="Pet">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="PetName" ColumnName="PetName" />

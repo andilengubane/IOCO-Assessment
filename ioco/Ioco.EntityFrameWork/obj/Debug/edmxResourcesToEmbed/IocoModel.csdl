@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="IocoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Owner">
     <Key>
       <PropertyRef Name="Id" />
@@ -36,7 +36,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="IocoEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="IOCOEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Owner" EntityType="Self.Owner" />
     <EntitySet Name="Pet" EntityType="Self.Pet" />
     <AssociationSet Name="FK__Owner__PetId__1367E606" Association="Self.FK__Owner__PetId__1367E606">

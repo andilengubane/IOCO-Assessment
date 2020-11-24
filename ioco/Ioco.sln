@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ioco.Service", "Ioco.Servic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ioco.DTO", "Ioco.DTO\Ioco.DTO.csproj", "{5A545737-C68F-4D9E-A953-A06920B68917}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ioco.Core", "Ioco.Core\Ioco.Core.csproj", "{B0869DC7-9483-4100-98A0-8903874CD2E6}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ioco.EntityFrameWork", "Ioco.EntityFrameWork\Ioco.EntityFrameWork.csproj", "{4F7C83A5-6B99-4009-A7E6-1C446A963C80}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{5A545737-C68F-4D9E-A953-A06920B68917}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A545737-C68F-4D9E-A953-A06920B68917}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A545737-C68F-4D9E-A953-A06920B68917}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B0869DC7-9483-4100-98A0-8903874CD2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B0869DC7-9483-4100-98A0-8903874CD2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B0869DC7-9483-4100-98A0-8903874CD2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B0869DC7-9483-4100-98A0-8903874CD2E6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4F7C83A5-6B99-4009-A7E6-1C446A963C80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F7C83A5-6B99-4009-A7E6-1C446A963C80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F7C83A5-6B99-4009-A7E6-1C446A963C80}.Release|Any CPU.ActiveCfg = Release|Any CPU

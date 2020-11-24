@@ -1,26 +1,39 @@
 ﻿using System;
-using Ioco.Core;
 using Ioco.DTO;
+using System.Linq;
+using System.Web.Mvc;
+using System.Data.Entity;
+using Ioco.EntityFrameWork;
 using System.Collections.Generic;
 
 namespace Ioco.Service
 {
-    public class PetService : IPetService
+    public class PetService
     {
-        private readonly UnitOfWork _uow = new UnitOfWork();
-
-        public PetService() { }
-        public List<PetDTO> GetAllPets()
+        private readonly static IOCOEntities context = new IOCOEntities();
+        public static string SavePet(PetDTO model)
         {
-            try
+            if (model.Id == 0)
             {
-                var results = _uow.PetRepository.GetAllPets();
-                return results;
+                context.Pet.Add(new Pet
+                {
+                    PetName = model.PetName,
+                    Description = model.Description,
+                    DateLogged = DateTime.Now
+                });
+                context.SaveChanges();
             }
-            catch (Exception ex)
+            return "Pet was successful added";
+        }
+
+        public static IEnumerable<SelectListItem> GetPetList()
+        {
+            var query = context.Pet.Select(x => new SelectListItem
             {
-                return new List<PetDTO>();
-            }
+                Value = x.Id.ToString(),
+                Text = x.PetName
+            });
+            return new SelectList(query, "Value", "Text");
         }
     }
 }

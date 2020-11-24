@@ -1,47 +1,33 @@
-﻿using Ioco.DTO;
+﻿using System;
+using Ioco.DTO;
 using Ioco.Service;
 using System.Web.Http;
 using System.Web.Http.Cors;
-using System.Web.Http.Description;
+using System.Collections.Generic;
 
 namespace Ioco.Application.Controllers
 {
+    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class OwnerController : ApiController
     {
-        private readonly IOnwerService _ownerService;
-        public OwnerController()
-        {
-            _ownerService = new OnwerService();
-        }
-
+        // GET: api/Owner
         [HttpGet]
-        public IHttpActionResult GetAllStudents()
+        public List<OwnerDTO> GetList()
         {
-            var results = _ownerService.GetAllOwner();
-            if (results != null)
-            {
-                return Ok(results);
-            }
-            return BadRequest("Something went wrong");
+            List<OwnerDTO> model = OwnerService.GetOwnerDetails();
+            return model;
         }
 
+        // POST: api/Owner
         [HttpPost]
-        public IHttpActionResult SaveStudent([FromBody] Owners owners)
+        public string SaveOwner(OwnerDTO model)
         {
-            OwnerDTO ownerDTO = new OwnerDTO();
-            ownerDTO.FirstName = owners.firstName;
-            ownerDTO.LastName = owners.lastName;
-            ownerDTO.PhoneNumber = owners.phoneNumber;
-            ownerDTO.PetId = owners.petId;
-            ownerDTO.IdNumber = owners.idNumber;
-            ownerDTO.Address = owners.address;
-
-            var results = _ownerService.SaveOwner(ownerDTO);
-            if (results != null)
+            if (!String.IsNullOrWhiteSpace(model.IdNumber))
             {
-                return Ok(results);
+                return OwnerService.SaveOwner(model); 
             }
-            return BadRequest("Something went wrong");
+            return "Something went wrong with collection.";
         }
+
     }
 }
