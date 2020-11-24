@@ -18,10 +18,12 @@ namespace Ioco.Service
             {
                 context.Owner.Add(new Owner
                 {
-                    //InventoryTypeId = model.InventoryTypeId,
-                    //Name = model.Name,
-                    //SerialNumber = model.SerialNumber,
-                    //Model = model.Model,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    Address = model.Address,
+                    PetId = model.PetId,
+                    PhoneNumber = model.PhoneNumber,
+                    IdNumber = model.IdNumber,
                     DateLogged = DateTime.Now
                 });
                 context.SaveChanges();
@@ -34,12 +36,13 @@ namespace Ioco.Service
             List<OwnerDTO> data = context.Owner.Select(x => new OwnerDTO
             {
                 Id = x.Id,
-                //Name = x.Name,
-                //SerialNumber = x.SerialNumber,
-                //Model = x.Model,
-                //IsAssigned = x.IsAssigned,
-                //EmployeeNumber = x.EmployeeNumber,
-                //FullName = x.FULLNAME
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                Address = x.Address,
+                PetId = Convert.ToInt32(x.PetId),
+                PhoneNumber = x.PhoneNumber,
+                IdNumber = x.IdNumber,
+                DateLogged = Convert.ToDateTime(x.DateLogged)
             }).ToList();
             return data;
         }

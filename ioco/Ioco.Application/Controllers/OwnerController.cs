@@ -10,7 +10,7 @@ namespace Ioco.Application.Controllers
     [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
     public class OwnerController : ApiController
     {
-        // POST: api/Owner
+        // GET: api/Owner
         [HttpGet]
         public List<OwnerDTO> GetList()
         {
@@ -28,5 +28,6 @@ namespace Ioco.Application.Controllers
             }
             return "Something went wrong with collection.";
         }
+
     }
 }
